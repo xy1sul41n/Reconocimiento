@@ -2,7 +2,11 @@
 
 Con esta utilidad, vamos a agilizar el proceso de reconocimiento inicial de una dirección IP. 
 Al pasarle un archivo de resultados de un reconocimiento de nmap, nos va mostrar los puertos abiertos y se nos copiará a la clipboard.
-En primer lugar deberemos editar el archivo ".bashrc":
+Necesitaremos la herramienta xclip:
+```
+sudo apt install xclip
+```
+Editaremos el archivo ".bashrc":
 ```
 nano /.bashrc
 ```
@@ -19,7 +23,8 @@ purpleColour="\e[0;35m\033[1m"
 turquoiseColour="\e[0;36m\033[1m"
 grayColour="\e[0;37m\033[1m"
 ```
-Una vez incluida la tabla de colores, en el mismo archivo bajamos hacia abajo hasta encontrar los alias. Debajo de ellos vamos a incluir nuestra función:
+
+Una vez incluida la tabla de colores y descargada la herramienta xclip, en el mismo archivo bajamos hacia abajo hasta encontrar los alias. Debajo de ellos vamos a incluir nuestra función:
 ```
 function extractPorts(){
         echo -e "\n${yellowColour}[*] Extracting Information...${endColour}\n"
