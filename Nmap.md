@@ -21,7 +21,7 @@ Este tipo de reconocimiento agiliza el escaneo y tarda menos:
 nmap -sS --min-rate 5000 --open -vvv -Pn -p- 10.10.10.10
 ```
 * **-sS** TCP SYN Scan.
-* ** --min-rate 5000** Envíar 5000 paquetes/segundo.
+* **--min-rate 5000** Envíar 5000 paquetes/segundo.
 * **-vvv** Muestra la información a medida que la descubre.
 * **-Pn** No aplicar descubrimiento de hosts a través del protocolo de resolucion de direcciones ARP.
 
