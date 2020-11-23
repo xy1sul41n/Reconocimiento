@@ -16,7 +16,7 @@ purpleColour="\e[0;35m\033[1m"
 turquoiseColour="\e[0;36m\033[1m"
 grayColour="\e[0;37m\033[1m"
 ```
-Una vez incluido esto, en el mismo archivo bajamos hacia abajo hasta encontrar los alias. Debajo de ellos vamos a incluir nuestra función:
+Una vez incluida la tabla de colores, en el mismo archivo bajamos hacia abajo hasta encontrar los alias. Debajo de ellos vamos a incluir nuestra función:
 ```
 function extractPorts(){
         echo -e "\n${yellowColour}[*] Extracting Information...${endColour}\n"
@@ -32,4 +32,19 @@ function extractPorts(){
 }
 ```
 Guardamos el archivo... y LISTO!
+
+### Hay que tener en cuenta que el resultado de nmap debe ser en formato grepeable. Si no no funcionará la utilidad. 
+Para guardar el resultado en este formato debemos añadir la siguiente flag cuando se realice el reconocimiento con nmap:
+```
+-oG nombredearchivo
+```
+En mi caso los resultados de nmap los guardo con el nombre allPorts. Si le poneis otro nombre al archivo del resultado debes cambiar la primera parte de las variables "ip_address" y "open_ports". 
+```
+ ip_address=$(cat allPorts)
+ open_ports=$(cat allPorts)
+ 
+ ip_address=$(cat nombre_archivo_resultado_nmap)
+ open_ports=$(cat nombre_archivo_resultado_nmap)
+ ```
+ 
 
