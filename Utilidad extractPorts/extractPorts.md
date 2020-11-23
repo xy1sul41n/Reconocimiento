@@ -1,3 +1,5 @@
+# extractPorts
+
 Con esta utilidad al pasarle un archivo de resultados de un reconocimiento de nmap, nos va mostrar los puertos abiertos y se nos copiará a la clipboard.
 En primer lugar deberemos editar el archivo ".bashrc":
 ```
