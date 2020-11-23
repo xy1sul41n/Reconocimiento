@@ -34,16 +34,10 @@ function extractPorts(){
         echo -e "${yellowColour}[*] Ports has been copied to clipboard!${endColour}\n"
 }
 ```
-Guardamos el archivo... y LISTO!
-Para utilizar la función:
-```
-extractPorts nombre_del_archivo
-```
-
 #### Hay que tener en cuenta que el resultado de nmap debe ser en formato grepeable. Si no no funcionará la utilidad. 
 Para guardar el resultado en este formato debemos añadir la siguiente flag cuando se realice el reconocimiento con nmap:
 ```
--oG nombredearchivo
+-oG nombre_del_archivo
 ```
 En mi caso los resultados de nmap los guardo con el nombre allPorts. Si le poneis otro nombre al archivo del resultado debes cambiar la primera parte de las variables "ip_address" y "open_ports". 
 ```
@@ -53,5 +47,12 @@ En mi caso los resultados de nmap los guardo con el nombre allPorts. Si le ponei
  ip_address=$(cat nombre_archivo_resultado_nmap)
  open_ports=$(cat nombre_archivo_resultado_nmap)
  ```
+Guardamos el archivo... y LISTO!
+Para utilizar la función:
+```
+extractPorts nombre_del_archivo
+```
+
+
  
 
