@@ -9,7 +9,7 @@ nmap -p- --open -T5 -v -n -oG allPorts 10.10.10.10
 * **--open** Solo mostrará los puertos abiertos.
 * **-T5** Escaneo rápido. Escala de 1-5, siendo 5 el más rápido y ruidoso (recomendado para entornos controlados).
 * **-v** Modo verbose. Para que nos indique lo que vaya descubriendo.
-* **-n** El escaneo se demora mucho menos.
+* **-n** Quita la resoluciíon DNS. El escaneo se demora mucho menos.
 * **-oG allPorts** Exportar resultado en formato grepeable a un archivo llamado allPorts.
 Con la utilidad extractPorts sacamos los puertos abiertos del archivo allPorts y se copian en la clipboard:
 ```
