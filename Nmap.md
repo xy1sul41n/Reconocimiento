@@ -1,7 +1,7 @@
 # Nmap
 ### Reconocimiento inicial.
 
-Para realizar un reconocimiento inicial de la dirección IP en la cual nos proporcionará todos los puertos abiertos que tiene la maquina utilizaremos:
+Para realizar un reconocimiento inicial de la dirección IP, el cual nos proporcionará todos los puertos abiertos que tiene la maquina, utilizaremos:
 ```
 nmap -p- --open -T5 -v -n -oG allPorts 10.10.10.10
 ```
