@@ -32,8 +32,12 @@ function extractPorts(){
 }
 ```
 Guardamos el archivo... y LISTO!
+Para utilizar la función:
+```
+extractPorts nombre_del_archivo
+```
 
-### Hay que tener en cuenta que el resultado de nmap debe ser en formato grepeable. Si no no funcionará la utilidad. 
+#### Hay que tener en cuenta que el resultado de nmap debe ser en formato grepeable. Si no no funcionará la utilidad. 
 Para guardar el resultado en este formato debemos añadir la siguiente flag cuando se realice el reconocimiento con nmap:
 ```
 -oG nombredearchivo
