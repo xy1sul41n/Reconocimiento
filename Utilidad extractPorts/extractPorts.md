@@ -11,7 +11,7 @@ Editaremos el archivo ".bashrc":
 nano /.bashrc
 ```
 Si tu shell es otra diferente a bash, deberás cambiar el nombre del archivo por el de tu shell.
-Para que la herramienta quede bonita el resultado que proporciona vamos a incluir una tabla de colores al principio del archivo mencionado anteriormente:
+Para que el resultado de la herramienta quede bonito vamos a incluir una tabla de colores al principio del archivo mencionado anteriormente:
 ```
 #Colours
 greenColour="\e[0;32m\033[1m"
