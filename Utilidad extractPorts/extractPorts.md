@@ -1,6 +1,7 @@
 # extractPorts
 
-Con esta utilidad al pasarle un archivo de resultados de un reconocimiento de nmap, nos va mostrar los puertos abiertos y se nos copiará a la clipboard.
+Con esta utilidad, vamos a agilizar el proceso de reconocimiento inicial de una dirección IP. 
+Al pasarle un archivo de resultados de un reconocimiento de nmap, nos va mostrar los puertos abiertos y se nos copiará a la clipboard.
 En primer lugar deberemos editar el archivo ".bashrc":
 ```
 nano /.bashrc
