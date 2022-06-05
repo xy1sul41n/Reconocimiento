@@ -27,20 +27,6 @@ grayColour="\e[0;37m\033[1m"
 Una vez incluida la tabla de colores y descargada la herramienta xclip, en el mismo archivo bajamos hacia abajo hasta encontrar los alias. Debajo de ellos vamos a incluir nuestra función:
 ```
 function extractPorts(){
-        echo -e "\n${yellowColour}[*] Extracting Information...${endColour}\n"
-        
-        ip_address=$(cat allPorts) | grep -oP '\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}' | sort -u
-        open_ports=$(cat allPorts) | grep -oP '\d{1,5}/open' | awk '{print $1}' FS="/" | xargs | tr ' ' ',')
-        
-        echo -e "\t${blueColour}[*] IP Address:${endColour}${grayColour}$ip_address${endColour}"
-        echo -e "\t${blueColour}[*] Open Ports:${endColour}${grayColour}$open_port${endColour}\n"
-        
-        echo $open_ports | tr -d '\n' | xclip -sel clip
-        echo -e "${yellowColour}[*] Ports has been copied to clipboard!${endColour}\n"
-}
-```
-```
-function extractPorts(){
     ports="$(cat $1 | grep -oP '\d{1,5}/open' | awk '{print $1}' FS='/' | xargs | tr ' ' ',')"
     ip_address="$(cat $1 | grep -oP '\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}' | sort -u | head -n 1)"
     echo -e "\n[*] Extracting information...\n" > extractPorts.tmp
